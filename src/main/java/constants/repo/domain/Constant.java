@@ -3,7 +3,7 @@ package constants.repo.domain;
 public class Constant<T> {
   long id;
   String localizedName;
-  int entityTypeId;
+  int constantTypeId;
   Long parentId;
   T attributes;
 
@@ -16,7 +16,7 @@ public class Constant<T> {
     super();
     this.id = id;
     this.localizedName = localizedName;
-    this.entityTypeId = entityTypeId;
+    this.constantTypeId = entityTypeId;
     this.parentId = parentId;
     this.attributes = attributes;
   }
@@ -37,12 +37,12 @@ public class Constant<T> {
     this.localizedName = localizedName;
   }
 
-  public int getEntityTypeId() {
-    return entityTypeId;
+  public int getConstantTypeId() {
+    return constantTypeId;
   }
 
-  public void setEntityTypeId(int entityTypeId) {
-    this.entityTypeId = entityTypeId;
+  public void setConstantTypeId(int entityTypeId) {
+    this.constantTypeId = entityTypeId;
   }
 
   public Long getParentId() {

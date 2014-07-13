@@ -1,5 +1,5 @@
 package constants.repo.domain;
 
-public enum EntityType {
+public enum ConstantType {
   AD_SIZE
 }

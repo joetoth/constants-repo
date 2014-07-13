@@ -6,21 +6,21 @@ import java.util.Locale;
 import java.util.Map;
 
 import constants.repo.domain.Constant;
-import constants.repo.domain.EntityType;
+import constants.repo.domain.ConstantType;
 
 public class ConstantsRepositories {
-  Map<EntityType, ConstantRepository<?>> repositories = new HashMap<>();
+  Map<ConstantType, ConstantRepository<?>> repositories = new HashMap<>();
 
   public ConstantsRepositories() {
-    repositories.put(EntityType.AD_SIZE, new AdSizeRepository());
+    repositories.put(ConstantType.AD_SIZE, new AdSizeRepository());
   }
 
   <T extends ConstantRepository<?>> T getRepository(
-      EntityType entityType) {
+      ConstantType entityType) {
     return (T) repositories.get(entityType);
   }
 
-  <T> List<Constant<T>> getEntities(Locale locale, EntityType entityType) {
+  <T> List<Constant<T>> getEntities(Locale locale, ConstantType entityType) {
     ConstantRepository<T> repo = getRepository(entityType);
     return repo.getEntities(locale);
   }
